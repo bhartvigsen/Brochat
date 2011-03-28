@@ -65,7 +65,6 @@ class SQL {
 		SQL::dbconnect();
 		$xtime = time();
 		$xtime -= 10;
-		//$exited = '<span class="blue"> *** ' . $qstring . ' has left the room<br /></span>';
 		$checkarray =  mysql_query('SELECT * from brochat.userlist WHERE ping <' . '"' . $xtime . '"');
 		while ($tmpar = mysql_fetch_array($checkarray)) {
 			$exited = '<span class="blue"> *** ' . $tmpar[1] . ' has left the room<br /></span>';
