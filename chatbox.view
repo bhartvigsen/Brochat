@@ -1,0 +1,42 @@
+<div id="chatbox">
+	<div id="chatpane">
+		<?php SQL::getChat(); ?>
+	</div>
+	<div id="userpane">
+		<select multiple="multiple" size="29">
+		<?php SQL::getUsers(); ?>
+		</select>
+	</div>
+	<div id="regpane">
+		<script type="text/javascript">
+			jQuery(function() {
+				jQuery("button").button();
+				jQuery( "button" ).click(function() { $( "#dialog" ).dialog({ }); });
+				jQuery("nickname").focus();
+			});
+		</script>
+		<div id="dialog" title="User registration">
+		        Please enter a nickname:
+        		<form action="index.php" method="post">
+				<div>
+        	                	<input id="nickname" name="nickname" type="text" />
+                	        	<br /><br />
+                        		<button type="submit">Click here to join chat</button>
+				</div>
+        		</form>
+
+		</div>
+		<div class="register">
+			<br />
+			<button>Click here to register</button>
+		</div>
+	</div>
+	<div id="tpane">
+		<form id="inputbox2" action="index.php" method="post">
+			<div>
+				<input type="text" size="50" id="inputpane" name="inputpane" />
+				<input id="schat" type="submit" value="&gt;" />
+			</div>
+		</form>
+	</div>
+</div>
