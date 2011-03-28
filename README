@@ -1,0 +1,1 @@
+You will need to load the db.sql file into your MySQL server. Then setup config.php with your own settings.
